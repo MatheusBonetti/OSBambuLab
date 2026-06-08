@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O.S 3D Touch – Manutenção e Garantia</title>
+  <title>O.S BambuLab – Manutenção e Garantia</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -321,7 +321,7 @@
   </div>
   <div class="header-text">
     <h1>Ordem de Serviços</h1>
-    <p>Manutenção e Garantia · 3D Touch</p>
+    <p>Manutenção e Garantia · BambuLab</p>
   </div>
 </header>
 
@@ -407,11 +407,15 @@
           <div class="modelo-grid" id="modeloGrid">
             <button class="btn-modelo" onclick="selecionarModelo(this)">A1 mini</button>
             <button class="btn-modelo" onclick="selecionarModelo(this)">A1</button>
+            <button class="btn-modelo" onclick="selecionarModelo(this)">A2L</button>
             <button class="btn-modelo" onclick="selecionarModelo(this)">P1</button>
             <button class="btn-modelo" onclick="selecionarModelo(this)">P2</button>
             <button class="btn-modelo" onclick="selecionarModelo(this)">X1</button>
+            <button class="btn-modelo" onclick="selecionarModelo(this)">X2</button>
             <button class="btn-modelo" onclick="selecionarModelo(this)">H2</button>
             <button class="btn-modelo" onclick="selecionarModelo(this)">AMS</button>
+            <button class="btn-modelo" onclick="selecionarModelo(this)">AMS 2</button>
+            <button class="btn-modelo" onclick="selecionarModelo(this)">AMS 2 Pro</button>
           </div>
         </div>
         <div class="row">
@@ -640,7 +644,7 @@
 </head><body>
 <div class="logo-bar">
   <div class="logo-box"><span>3D</span></div>
-  <div class="logo-title"><h1>Ordem de Serviço</h1><p>Manutenção e Garantia · 3D Touch</p></div>
+  <div class="logo-title"><h1>Ordem de Serviço</h1><p>Manutenção e Garantia · BambuLab</p></div>
   <div style="margin-left:auto;text-align:right">
     <div style="font-size:18px;font-weight:900">${fmt(d.nomeOS)}</div>
     <div style="font-size:11px;color:#888">Chamado: ${fmt(d.numeroChamado)}</div>
@@ -729,7 +733,7 @@
   </div>
 </div>
 
-<div class="footer">3D Touch – Manutenção e Garantia &nbsp;|&nbsp; Gerado em \${new Date().toLocaleDateString('pt-BR')}</div>
+<div class="footer">BambuLab – Manutenção e Garantia &nbsp;|&nbsp; Gerado em \${new Date().toLocaleDateString('pt-BR')}</div>
 <script>window.onload=()=>window.print()<\/script>
 </body></html>\`);
     win.document.close();
