@@ -630,30 +630,43 @@
       : '';
     const css = [
       '*{box-sizing:border-box;margin:0;padding:0}',
-      'body{font-family:Arial,sans-serif;font-size:13px;color:#111;padding:28px 32px}',
-      '.logo-bar{display:flex;align-items:center;gap:12px;margin-bottom:20px}',
-      '.logo-box{width:36px;height:36px;background:#1FA852;border-radius:5px;display:flex;align-items:center;justify-content:center}',
-      '.logo-box span{color:#fff;font-weight:900;font-size:16px}',
-      '.logo-title h1{font-size:16px;font-weight:700}',
-      '.logo-title p{font-size:11px;color:#888}',
-      'h2{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;background:#111;color:#fff;padding:7px 12px;margin:-1px -1px 12px;border-radius:4px 4px 0 0}',
-      '.section{border:1px solid #ddd;border-radius:6px;margin-bottom:14px;overflow:hidden}',
-      '.body{padding:10px 12px}',
-      '.row{display:flex;gap:20px;margin-bottom:8px}',
+      'body{font-family:Arial,sans-serif;font-size:13px;color:#111;padding:28px 32px;background:#f4f6f4}',
+      /* cabeçalho */
+      '.logo-bar{display:flex;align-items:center;gap:12px;margin-bottom:22px;background:#fff;border-radius:8px;padding:14px 16px;border-left:5px solid #1FA852;box-shadow:0 1px 4px rgba(0,0,0,.07)}',
+      '.logo-box{width:40px;height:40px;background:#1FA852;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}',
+      '.logo-box span{color:#fff;font-weight:900;font-size:17px}',
+      '.logo-title h1{font-size:16px;font-weight:700;color:#111}',
+      '.logo-title p{font-size:11px;color:#1FA852;font-weight:600;margin-top:1px}',
+      /* seções */
+      '.section{border:1px solid #e2ece5;border-radius:8px;margin-bottom:14px;overflow:hidden;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.05)}',
+      /* cores alternadas por seção via classe */
+      '.sec-id   h2{background:#1a3a27}',
+      '.sec-cli  h2{background:#1f4a32}',
+      '.sec-maq  h2{background:#1FA852}',
+      '.sec-iten h2{background:#178a44}',
+      '.sec-desc h2{background:#2d6e49}',
+      '.sec-serv h2{background:#245c3d}',
+      'h2{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#fff;padding:8px 13px;margin:-1px -1px 12px}',
+      '.body{padding:10px 13px}',
+      '.row{display:flex;gap:20px;margin-bottom:10px}',
       '.row:last-child{margin-bottom:0}',
       '.field{flex:1}',
-      '.field label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#888;display:block;margin-bottom:2px}',
-      '.field span{font-size:13px}',
-      '.checks{display:flex;flex-wrap:wrap;gap:6px 14px}',
-      '.checks span{font-size:12px;background:#f5f5f5;padding:3px 8px;border-radius:4px}',
-      '.estado-badge{display:inline-block;padding:4px 10px;border-radius:4px;font-size:12px;font-weight:700}',
-      '.estado-bom{background:#dcfce7;color:#16a34a}',
-      '.estado-dan{background:#fee2e2;color:#dc2626}',
-      '.datas-bar{background:#1FA852;color:#fff;border-radius:6px;padding:12px 14px;margin-bottom:14px}',
-      '.datas-bar .row .field label{color:rgba(255,255,255,.7)}',
-      '.datas-bar .row .field span{color:#fff;font-weight:600}',
-      '.footer{text-align:center;color:#bbb;font-size:11px;margin-top:20px;border-top:1px solid #eee;padding-top:10px}',
-      '@media print{body{padding:14px}button{display:none}}'
+      '.field label{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#1FA852;display:block;margin-bottom:3px}',
+      '.field span{font-size:13px;color:#111}',
+      /* checks */
+      '.checks{display:flex;flex-wrap:wrap;gap:5px 10px}',
+      '.checks span{font-size:12px;background:#e8f5ee;color:#155e36;padding:3px 9px;border-radius:20px;border:1px solid #b6dfc6}',
+      /* estado */
+      '.estado-badge{display:inline-block;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700}',
+      '.estado-bom{background:#dcfce7;color:#16a34a;border:1px solid #86efac}',
+      '.estado-dan{background:#fee2e2;color:#dc2626;border:1px solid #fca5a5}',
+      /* barra de datas */
+      '.datas-bar{background:linear-gradient(135deg,#1FA852,#178a44);color:#fff;border-radius:8px;padding:14px 16px;margin-bottom:14px;box-shadow:0 2px 6px rgba(31,168,82,.25)}',
+      '.datas-bar .row .field label{color:rgba(255,255,255,.75);font-size:10px}',
+      '.datas-bar .row .field span{color:#fff;font-weight:700;font-size:14px}',
+      /* rodapé */
+      '.footer{text-align:center;color:#aaa;font-size:11px;margin-top:18px;border-top:1px solid #ddd;padding-top:10px}',
+      '@media print{body{padding:14px;background:#fff}.logo-bar,.section,.datas-bar{box-shadow:none}button{display:none}}'
     ].join('');
     const html = '<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"/>'
       + '<title>OS – ' + fmt(d.nomeOS) + '</title>'
@@ -666,19 +679,19 @@
       +     '<div style="font-size:11px;color:#888">Chamado: ' + fmt(d.numeroChamado) + '</div>'
       +   '</div>'
       + '</div>'
-      + '<div class="section"><h2>Identificação da OS</h2><div class="body"><div class="row">'
+      + '<div class="section sec-id"><h2>Identificação da OS</h2><div class="body"><div class="row">'
       +   '<div class="field"><label>Nome da OS</label><span>' + fmt(d.nomeOS) + '</span></div>'
       +   '<div class="field"><label>Número do Chamado</label><span>' + fmt(d.numeroChamado) + '</span></div>'
       +   '<div class="field"><label>Revenda</label><span>' + fmt(d.revenda) + '</span></div>'
       + '</div></div></div>'
-      + '<div class="section"><h2>Dados do Cliente</h2><div class="body">'
+      + '<div class="section sec-cli"><h2>Dados do Cliente</h2><div class="body">'
       +   '<div class="row">'
       +     '<div class="field"><label>Nome</label><span>' + fmt(d.clienteNome) + '</span></div>'
       +     '<div class="field"><label>CPF / CNPJ</label><span>' + fmt(d.clienteCpf) + '</span></div>'
       +   '</div>'
       +   '<div class="row"><div class="field"><label>Endereço</label><span>' + fmt(d.clienteEndereco) + '</span></div></div>'
       + '</div></div>'
-      + '<div class="section"><h2>Informações da Máquina</h2><div class="body">'
+      + '<div class="section sec-maq"><h2>Informações da Máquina</h2><div class="body">'
       +   '<div class="row">'
       +     '<div class="field"><label>NS Impressora</label><span>' + fmt(d.nsImpressora) + '</span></div>'
       +     '<div class="field"><label>NS AMS</label><span>' + fmt(d.nsAMS) + '</span></div>'
@@ -689,7 +702,7 @@
       +     '<div class="field"><label>Horas de Uso</label><span>' + fmt(d.horasUso) + '</span></div>'
       +   '</div>'
       + '</div></div>'
-      + '<div class="section"><h2>Itens Recebidos</h2><div class="body">'
+      + '<div class="section sec-iten"><h2>Itens Recebidos</h2><div class="body">'
       +   '<div class="row"><div class="field"><label>Acessórios</label>'
       +     '<div class="checks">' + checksHtml + '</div>'
       +   '</div></div>'
@@ -698,10 +711,10 @@
       +   '</div></div>'
       +   obsRecHtml
       + '</div></div>'
-      + '<div class="section"><h2>Descrição do Caso</h2><div class="body">'
+      + '<div class="section sec-desc"><h2>Descrição do Caso</h2><div class="body">'
       +   '<div class="field"><label>Problema / Caso</label><span style="white-space:pre-wrap">' + fmt(d.descProblema) + '</span></div>'
       + '</div></div>'
-      + '<div class="section"><h2>Serviço Realizado (Manutenção)</h2><div class="body">'
+      + '<div class="section sec-serv"><h2>Serviço Realizado (Manutenção)</h2><div class="body">'
       +   '<div class="row"><div class="field"><label>Serviço Realizado</label><span style="white-space:pre-wrap">' + fmt(d.servicoRealizado) + '</span></div></div>'
       +   obsDevolHtml
       + '</div></div>'
