@@ -340,7 +340,7 @@
   <aside>
     <div class="sidebar-title">Histórico de Ordens</div>
     <input class="sidebar-search" type="text" placeholder="Buscar por cliente ou OS..." id="searchInput" oninput="filtrarOS()" />
-    <button class="btn-nova-os" onclick="novaOS()">+ Nova Ordem de Serviço</button>
+    <button type="button" class="btn-nova-os" onclick="novaOS()">+ Nova Ordem de Serviço</button>
     <div class="os-list" id="osList"></div>
   </aside>
 
@@ -414,17 +414,17 @@
         <div class="field" style="margin-bottom:14px">
           <label>Modelo da Máquina</label>
           <div class="modelo-grid" id="modeloGrid">
-            <button class="btn-modelo" onclick="selecionarModelo(this)">A1 mini</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">A1</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">A2L</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">P1</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">P2</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">X1</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">X2</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">H2</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">AMS</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">AMS 2</button>
-            <button class="btn-modelo" onclick="selecionarModelo(this)">AMS 2 Pro</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">A1 mini</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">A1</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">A2L</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">P1</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">P2</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">X1</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">X2</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">H2</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">AMS</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">AMS 2</button>
+            <button type="button" class="btn-modelo" onclick="selecionarModelo(this)">AMS 2 Pro</button>
           </div>
         </div>
         <div class="row">
@@ -458,8 +458,8 @@
           <label>Estado de Recebimento</label>
         </div>
         <div class="estado-row" style="margin-bottom:14px">
-          <button class="btn-estado bom" onclick="selecionarEstado(this,'bom')">✔ Bom estado</button>
-          <button class="btn-estado dan" onclick="selecionarEstado(this,'dan')">✖ Danificada</button>
+          <button type="button" class="btn-estado bom" onclick="selecionarEstado(this,'bom')">✔ Bom estado</button>
+          <button type="button" class="btn-estado dan" onclick="selecionarEstado(this,'dan')">✖ Danificada</button>
         </div>
         <div class="field">
           <label>Observações de Recebimento</label>
@@ -523,8 +523,8 @@
 
     <!-- ACTIONS -->
     <div class="actions">
-      <button class="btn-limpar" onclick="limparTudo()">Limpar tudo</button>
-      <button class="btn-salvar" onclick="salvarEGerarPDF()">
+      <button type="button" class="btn-limpar" onclick="limparTudo()">Limpar tudo</button>
+      <button type="button" class="btn-salvar" onclick="salvarEGerarPDF()">
         <svg viewBox="0 0 24 24"><path d="M12 16l-4-4h3V4h2v8h3l-4 4zm-7 2h14v2H5v-2z"/></svg>
         Salvar e Gerar PDF
       </button>
