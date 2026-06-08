@@ -28,7 +28,7 @@
     }
     .logo-icon {
       width: 40px; height: 40px;
-      background: #e63329;
+      background: #1FA852;
       border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
@@ -58,7 +58,7 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
-      color: #e63329;
+      color: #1FA852;
       text-transform: uppercase;
       margin-bottom: 4px;
     }
@@ -71,7 +71,7 @@
       color: #555;
       outline: none;
     }
-    .sidebar-search:focus { border-color: #e63329; }
+    .sidebar-search:focus { border-color: #1FA852; }
     .btn-nova-os {
       width: 100%;
       padding: 10px;
@@ -94,7 +94,7 @@
       font-size: 13px;
       transition: border-color .15s, background .15s;
     }
-    .os-item:hover { border-color: #e63329; background: #fff5f5; }
+    .os-item:hover { border-color: #1FA852; background: #f0faf4; }
     .os-item-name { font-weight: 600; }
     .os-item-sub  { font-size: 11px; color: #888; margin-top: 2px; }
 
@@ -124,7 +124,7 @@
     .card-header .dot {
       width: 10px; height: 10px;
       border-radius: 50%;
-      background: #e63329;
+      background: #1FA852;
       flex-shrink: 0;
     }
     .card-header h2 {
@@ -160,7 +160,7 @@
       font-family: inherit;
     }
     .field input:focus,
-    .field textarea:focus { border-color: #e63329; }
+    .field textarea:focus { border-color: #1FA852; }
     .field textarea { resize: vertical; min-height: 90px; }
     .field input::placeholder,
     .field textarea::placeholder { color: #bbb; }
@@ -183,8 +183,8 @@
       transition: all .15s;
       text-align: center;
     }
-    .btn-modelo:hover  { border-color: #e63329; color: #e63329; }
-    .btn-modelo.active { border-color: #e63329; background: #e63329; color: #fff; }
+    .btn-modelo:hover  { border-color: #1FA852; color: #1FA852; }
+    .btn-modelo.active { border-color: #1FA852; background: #1FA852; color: #fff; }
 
     /* ── CHECKBOXES ── */
     .checks-row {
@@ -202,7 +202,7 @@
     }
     .check-label input[type=checkbox] {
       width: 16px; height: 16px;
-      accent-color: #e63329;
+      accent-color: #1FA852;
       cursor: pointer;
     }
 
@@ -220,12 +220,12 @@
     }
     .btn-estado.bom:hover  { border-color: #22c55e; color: #22c55e; }
     .btn-estado.bom.active { border-color: #22c55e; background: #22c55e; color: #fff; }
-    .btn-estado.dan:hover  { border-color: #e63329; color: #e63329; }
-    .btn-estado.dan.active { border-color: #e63329; background: #e63329; color: #fff; }
+    .btn-estado.dan:hover  { border-color: #1FA852; color: #1FA852; }
+    .btn-estado.dan.active { border-color: #1FA852; background: #1FA852; color: #fff; }
 
     /* ── DATAS CARD ── */
     .card-datas .card-body {
-      background: #e63329;
+      background: #1FA852;
     }
     .card-datas .field label { color: rgba(255,255,255,.75); }
     .card-datas .field input {
@@ -260,7 +260,7 @@
       padding: 11px 22px;
       border: none;
       border-radius: 6px;
-      background: #e63329;
+      background: #1FA852;
       color: #fff;
       font-size: 14px;
       font-weight: 600;
@@ -270,7 +270,7 @@
       gap: 8px;
       transition: background .15s;
     }
-    .btn-salvar:hover { background: #c72a22; }
+    .btn-salvar:hover { background: #178a44; }
     .btn-salvar svg { width: 16px; height: 16px; fill: #fff; }
 
     /* ── TOAST ── */
@@ -315,8 +315,17 @@
 <!-- HEADER -->
 <header>
   <div class="logo-icon">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+      <!-- tronco esquerdo -->
+      <line x1="8" y1="2" x2="8" y2="22"/>
+      <line x1="6" y1="7" x2="10" y2="7"/>
+      <line x1="6" y1="14" x2="10" y2="14"/>
+      <!-- tronco direito -->
+      <line x1="16" y1="4" x2="16" y2="22"/>
+      <line x1="14" y1="10" x2="18" y2="10"/>
+      <line x1="14" y1="17" x2="18" y2="17"/>
+      <!-- galho -->
+      <path d="M8 7 Q12 5 16 4"/>
     </svg>
   </div>
   <div class="header-text">
@@ -617,7 +626,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:Arial,sans-serif;font-size:13px;color:#111;padding:28px 32px}
   .logo-bar{display:flex;align-items:center;gap:12px;margin-bottom:20px}
-  .logo-box{width:36px;height:36px;background:#e63329;border-radius:5px;display:flex;align-items:center;justify-content:center}
+  .logo-box{width:36px;height:36px;background:#1FA852;border-radius:5px;display:flex;align-items:center;justify-content:center}
   .logo-box span{color:#fff;font-weight:900;font-size:16px}
   .logo-title h1{font-size:16px;font-weight:700}
   .logo-title p{font-size:11px;color:#888}
@@ -635,7 +644,7 @@
   .estado-badge{display:inline-block;padding:4px 10px;border-radius:4px;font-size:12px;font-weight:700}
   .estado-bom{background:#dcfce7;color:#16a34a}
   .estado-dan{background:#fee2e2;color:#dc2626}
-  .datas-bar{background:#e63329;color:#fff;border-radius:6px;padding:12px 14px;margin-bottom:14px}
+  .datas-bar{background:#1FA852;color:#fff;border-radius:6px;padding:12px 14px;margin-bottom:14px}
   .datas-bar .row .field label{color:rgba(255,255,255,.7)}
   .datas-bar .row .field span{color:#fff;font-weight:600}
   .footer{text-align:center;color:#bbb;font-size:11px;margin-top:20px;border-top:1px solid #eee;padding-top:10px}
@@ -643,7 +652,7 @@
 </style>
 </head><body>
 <div class="logo-bar">
-  <div class="logo-box"><span>3D</span></div>
+  <div class="logo-box"><span>BL</span></div>
   <div class="logo-title"><h1>Ordem de Serviço</h1><p>Manutenção e Garantia · BambuLab</p></div>
   <div style="margin-left:auto;text-align:right">
     <div style="font-size:18px;font-weight:900">${fmt(d.nomeOS)}</div>
@@ -801,7 +810,7 @@
     const t = document.getElementById('toast');
     document.getElementById('toastMsg').textContent = msg;
     t.querySelector('.check').textContent = erro ? '✖' : '✓';
-    t.querySelector('.check').style.color = erro ? '#e63329' : '#22c55e';
+    t.querySelector('.check').style.color = erro ? '#1FA852' : '#22c55e';
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2800);
   }
